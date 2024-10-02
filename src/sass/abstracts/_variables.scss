@@ -1,0 +1,19 @@
+:root {
+  --color-purple: #a729f5;
+  --color-dark-navy: #313e51;
+  --color-navy: #3b4d66;
+  --color-grey-navy: #626c7f;
+
+  --color-light-blue: #abc1e1;
+  --color-light-grey: #f4f6fa;
+  --color-pure-white: #ffffff;
+  --color-pure-white-50: rgb(255 255 255 / 0.5);
+  --color-green: #26d782;
+  --color-red: #ee5454;
+}
+
+//BREAKPOINTS
+
+$bp-1000: 62.5em; //1000px
+$bp-tablet: 56.25em; // 900px
+$bp-mobile: 34.375em; // 550px

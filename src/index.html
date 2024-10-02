@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Frontend quiz app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container light-mode">
+      <!-- Quiz menu start -->
+      Welcome to the Frontend Quiz! Pick a subject to get started. HTML CSS
+      JavaScript Accessibility
+      <button class="selection type-heading-s">
+        <div
+          class="selection-option selection-option--idle type-heading-s">
+          A
+        </div>
+        Selection Idle
+      </button>
+      <button class="selection selection--active type-heading-s">
+        <div
+          class="selection-option selection-option--active type-heading-s">
+          A
+        </div>
+        Selection Active
+      </button>
+      <button class="selection selection--correct type-heading-s">
+        <div
+          class="selection-option selection-option--correct type-heading-s">
+          A
+        </div>
+        Correct Answer
+        <img
+          src="assets/images/icon-correct.svg"
+          alt="Icon Corrrect Answer"
+          class="selection-icon" />
+      </button>
+      <button class="selection selection--picked-correctly type-heading-s">
+        <div
+          class="selection-option selection-option--picked-correct type-heading-s">
+          A
+        </div>
+        Picked Correctly
+        <img
+          src="assets/images/icon-correct.svg"
+          alt="Icon Corrrect Answer"
+          class="selection-icon" />
+      </button>
+      <button
+        class="selection selection--picked-incorrectly type-heading-s">
+        <div
+          class="selection-option selection-option--picked-incorrect type-heading-s">
+          A
+        </div>
+        Picked Incorrectly
+        <img
+          src="assets/images/icon-incorrect.svg"
+          alt="Icon Corrrect Answer"
+          class="selection-icon" />
+      </button>
+
+      <div class="selection">test</div>
+      <input
+        type="checkbox"
+        name=""
+        id=""
+        class="toggle"
+        aria-label="Toggle light and dark mode" />
+      <!-- Quiz menu end -->
+      <!-- Quiz question start -->
+      Question
+      <!-- number -->
+      of 10 A B C D Submit answer
+      <!-- Quiz question end -->
+      <!-- Quiz completed start -->
+      Quiz completed You scored...
+      <!-- score -->
+      out of 10
+      <!-- Quiz completed end -->
+    </div>
+  </body>
+</html>
