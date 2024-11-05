@@ -11,8 +11,11 @@
 
   border: none;
   min-width: 50rem;
-  margin-bottom: 2rem;
   transition: all 0.2s ease-in-out;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 
   &-icon {
     margin-left: auto;
@@ -69,6 +72,19 @@
     &--picked-incorrect {
       background-color: var(--color-red);
       color: var(--color-pure-white);
+    }
+
+    &--html {
+      background-color: var(--color-bg-html);
+    }
+    &--js {
+      background-color: var(--color-bg-js);
+    }
+    &--css {
+      background-color: var(--color-bg-css);
+    }
+    &--accessibility {
+      background-color: var(--color-bg-accessibility);
     }
   }
 }

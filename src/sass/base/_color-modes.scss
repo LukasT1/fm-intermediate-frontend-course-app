@@ -1,13 +1,69 @@
 .light-mode {
+  background: var(--color-light-grey)
+    url(../../assets/images/pattern-background-desktop-light.svg) no-repeat;
+  color: var(--color-dark-navy);
+
   .selection {
     background-color: var(--color-pure-white);
     color: var(--color-dark-navy);
   }
+
+  .nav {
+    color: var(--color-dark-navy);
+    &__toggle {
+      svg > path {
+        fill: var(--color-grey-navy);
+      }
+    }
+  }
+
+  .main__question {
+    color: var(--color-dark-navy);
+
+    &-sub-heading {
+      color: var(--color-grey-navy);
+    }
+
+    &-progress-bar {
+      outline: solid 0.5rem var(--color-pure-white);
+      background-color: var(--color-pure-white);
+      &-progress {
+        background-color: var(--color-purple);
+      }
+    }
+  }
 }
 
 .dark-mode {
+  background: var(--color-dark-navy)
+    url(../../assets/images/pattern-background-desktop-dark.svg) no-repeat;
   .selection {
     background-color: var(--color-navy);
     color: var(--color-pure-white);
+  }
+
+  .nav {
+    color: var(--color-pure-white);
+    &__toggle {
+      svg > path {
+        fill: var(--color-pure-white);
+      }
+    }
+  }
+
+  .main__question {
+    color: var(--color-pure-white);
+
+    &-sub-heading {
+      color: var(--color-light-blue);
+    }
+
+    &-progress-bar {
+      outline: solid 0.5rem var(--color-navy);
+      background-color: var(--color-navy);
+      &-progress {
+        background-color: var(--color-purple);
+      }
+    }
   }
 }
