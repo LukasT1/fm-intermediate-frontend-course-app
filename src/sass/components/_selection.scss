@@ -15,20 +15,24 @@
   min-width: 50rem;
   transition: all 0.2s ease-in-out;
 
+  &-disabled {
+    pointer-events: none;
+    cursor: default;
+
+    &:hover {
+      color: inherit;
+      background-color: inherit;
+    }
+  }
+
   &:hover &-option--idle {
     color: var(--color-purple);
     background-color: #f6e7ff;
   }
 
-  // &:not(:last-child) {
-  //   margin-bottom: 2rem;
-
   &-icon {
     margin-left: auto;
   }
-
-  // &:hover {
-  // }
 
   &--active {
     box-shadow: inset 0 0 0 3px var(--color-purple);
@@ -52,7 +56,7 @@
     box-shadow: inset 0 0 0 3px var(--color-red);
   }
 
-  &--correct {
+  &-tick {
     margin-left: auto;
   }
 
@@ -66,20 +70,10 @@
     color: var(--color-grey-navy);
     transition: all 0.2s ease-in-out;
 
-    // &--idle {
-    //   &:hover {
-    //     color: var(--color-purple);
-    //     background-color: #f6e7ff;
-    //   }
-    // }
-
     &--active {
       background-color: var(--color-purple);
       color: var(--color-pure-white);
     }
-
-    // &--correct {
-    // }
 
     &--picked-correct {
       background-color: var(--color-green);

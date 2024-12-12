@@ -547,6 +547,14 @@ p,
   min-width: 50rem;
   transition: all 0.2s ease-in-out;
 }
+.selection-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.selection-disabled:hover {
+  color: inherit;
+  background-color: inherit;
+}
 .selection:hover .selection-option--idle {
   color: var(--color-purple);
   background-color: #f6e7ff;
@@ -571,7 +579,7 @@ p,
 .selection--picked-incorrect {
   box-shadow: inset 0 0 0 3px var(--color-red);
 }
-.selection--correct {
+.selection-tick {
   margin-left: auto;
 }
 .selection-option {
