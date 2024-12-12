@@ -1,4 +1,5 @@
 import View from "./View";
+import { escapeCode } from "../helper";
 
 class OptionsView extends View {
   _parentElement = document.querySelector(".main__options");
@@ -25,7 +26,7 @@ class OptionsView extends View {
           class="selection-option selection-option--idle type-heading-s">
           ${this._data.optionsMap[i]}
         </div>
-        ${option}
+        ${escapeCode(option)}
       </button>`;
           })
           .join()}
@@ -110,7 +111,6 @@ class OptionsView extends View {
   addHandlerNextQuestion(handler) {
     this._parentElement.addEventListener("click", function (e) {
       const nextBtn = e.target.closest(".btn-next");
-      console.log(nextBtn);
       if (!nextBtn) return;
       nextBtn.addEventListener("click", function (e) {
         handler();
