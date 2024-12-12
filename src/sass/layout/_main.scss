@@ -10,6 +10,13 @@
     flex-flow: column nowrap;
     row-gap: 4rem;
 
+    &-heading {
+      order: 0;
+    }
+    // &-sub-heading {
+    //   order: 1;
+    // }
+
     &-progress-bar {
       outline: solid 0.5rem var(--color-pure-white);
       background-color: var(--color-pure-white);
@@ -21,13 +28,14 @@
       &-progress {
         background-color: var(--color-purple);
         border-radius: 5rem;
-        width: 10%;
+        width: 66%;
         height: 0.75rem;
       }
     }
   }
 
   &__options {
+    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
   }
