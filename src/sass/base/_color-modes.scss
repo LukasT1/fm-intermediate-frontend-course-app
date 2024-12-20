@@ -17,18 +17,24 @@
     }
   }
 
-  .main__question {
-    color: var(--color-dark-navy);
-
-    &-sub-heading {
-      color: var(--color-grey-navy);
+  .main {
+    &__result {
+      background-color: var(--color-pure-white);
     }
 
-    &-progress-bar {
-      outline: solid 0.5rem var(--color-pure-white);
-      background-color: var(--color-pure-white);
-      &-progress {
-        background-color: var(--color-purple);
+    &__question {
+      color: var(--color-dark-navy);
+
+      &-sub-heading {
+        color: var(--color-grey-navy);
+      }
+
+      &-progress-bar {
+        outline: solid 0.5rem var(--color-pure-white);
+        background-color: var(--color-pure-white);
+        &-progress {
+          background-color: var(--color-purple);
+        }
       }
     }
   }
@@ -51,18 +57,23 @@
     }
   }
 
-  .main__question {
+  .main {
     color: var(--color-pure-white);
-
-    &-sub-heading {
-      color: var(--color-light-blue);
+    &__result {
+      background-color: var(--color-navy);
     }
 
-    &-progress-bar {
-      outline: solid 0.5rem var(--color-navy);
-      background-color: var(--color-navy);
-      &-progress {
-        background-color: var(--color-purple);
+    &__question {
+      &-sub-heading {
+        color: var(--color-light-blue);
+      }
+
+      &-progress-bar {
+        outline: solid 0.5rem var(--color-navy);
+        background-color: var(--color-navy);
+        &-progress {
+          background-color: var(--color-purple);
+        }
       }
     }
   }

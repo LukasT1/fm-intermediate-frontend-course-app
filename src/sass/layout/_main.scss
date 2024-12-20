@@ -4,6 +4,25 @@
   grid-column: 1 / -1;
   column-gap: 10vw;
 
+  &__result {
+    width: 75%;
+    padding: 4.8rem;
+    border-radius: 2.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 4rem;
+    box-shadow: 0 16px 40px rgba($color: #313e51, $alpha: 0.15);
+
+    &-heading {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-items: center;
+      column-gap: 2.5rem;
+    }
+  }
+
   &__question {
     grid-column: 1 / 2;
     display: flex;
