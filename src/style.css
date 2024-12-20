@@ -352,6 +352,12 @@ p,
   row-gap: 4rem;
   box-shadow: 0 16px 40px rgba(49, 62, 81, 0.15);
 }
+.main__result-btn-again {
+  grid-column: 2/3;
+  width: 75%;
+  justify-content: center;
+  margin-top: 2rem;
+}
 .main__result-heading {
   display: flex;
   flex-direction: row;

@@ -2,7 +2,7 @@ import { getData } from './helper'
 import { QUESTION_DATA_PATH } from './config'
 import { saveLocalStorage } from './helper'
 
-export const state = {
+const defaultState = {
   quiz: {},
   currQuestion: '',
   currOptions: [],
@@ -15,6 +15,14 @@ export const state = {
     answered: false,
   },
   theme: 'light', //true = light as default
+}
+
+export const state = {
+  ...defaultState,
+
+  reset() {
+    Object.assign(this, JSON.parse(JSON.stringify(defaultState)))
+  },
 
   setQuiz(quiz) {
     this.quiz = quiz
@@ -50,9 +58,6 @@ export const state = {
 
   setAnswered(value) {
     this.answers.answered = state.answers.selected[2] = value
-
-    console.log(this.answers.answered)
-    console.log(this)
   },
   setColorMode(theme) {
     this.theme = theme

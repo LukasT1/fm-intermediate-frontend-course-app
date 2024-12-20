@@ -14,6 +14,13 @@
     row-gap: 4rem;
     box-shadow: 0 16px 40px rgba($color: #313e51, $alpha: 0.15);
 
+    &-btn-again {
+      grid-column: 2/3;
+      width: 75%;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
     &-heading {
       display: flex;
       flex-direction: row;

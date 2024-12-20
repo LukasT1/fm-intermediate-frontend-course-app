@@ -4,6 +4,10 @@ class ResultsView extends View {
   _parentElement = document.querySelector('.main')
   _data
 
+  initElements() {
+    this._parentElement = document.querySelector('.main')
+  }
+
   _generateMarkup() {
     return `<div class="main__question">
           <div class="main__question-heading">
@@ -33,7 +37,16 @@ class ResultsView extends View {
             </p>
           </div>
           <button></button>
-        </div>`
+        </div>
+        <button class="btn main__result-btn-again type-heading-s">Play Again</button>`
+  }
+
+  addHandlerPlayAgain(handler) {
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest('.main__result-btn-again')
+      if (!btn) return
+      handler()
+    })
   }
 }
 

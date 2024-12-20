@@ -6,6 +6,8 @@ import questionView from './views/questionView.js'
 import resultsView from './views/resultsView.js'
 import View from './views/View.js'
 import { loadLocalStorage } from './helper'
+import { clearLocalStorage } from './helper.js'
+import initialView from './views/initialView.js'
 
 const view = new View()
 
@@ -92,7 +94,17 @@ const controLoad = function () {
   loadLocalStorage(model.state)
   controlQuiz()
   controlLightMode()
+}
+
+const controlPlayAgain = function () {
+  model.state.reset()
+  clearLocalStorage()
+  initialView.render(model.state)
+  optionsView.initElements()
+  questionView.initElements()
+  resultsView.initElements()
   init()
+  console.log(model.state)
 }
 
 export const init = function () {
@@ -102,6 +114,7 @@ export const init = function () {
   optionsView.addHandlerRenderSubmitAnswer(controlValidateAnswer)
   optionsView.addHandlerNextQuestion(controlNextQuestion)
   view.addHandlerChangeColorTheme(controlLightMode)
+  resultsView.addHandlerPlayAgain(controlPlayAgain)
 }
 
 init()

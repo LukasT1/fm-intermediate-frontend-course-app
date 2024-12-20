@@ -2,7 +2,6 @@ export default class View {
   _data
 
   render(data) {
-    console.log(data)
     if (!data) return
     this._data = data
 

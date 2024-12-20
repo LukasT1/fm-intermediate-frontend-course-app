@@ -46,3 +46,7 @@ export const loadLocalStorage = function (object) {
     console.error(error)
   }
 }
+
+export const clearLocalStorage = function () {
+  localStorage.clear()
+}

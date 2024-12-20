@@ -11,8 +11,9 @@ class OptionsView extends View {
   _data
 
   initElements() {
-    this._allButtons = this._parentElement.querySelectorAll('.selection')
-    this._allOptions = this._parentElement.querySelectorAll(
+    this._parentElement = document.querySelector('.main__options')
+    this._allButtons = this._parentElement?.querySelectorAll('.selection')
+    this._allOptions = this._parentElement?.querySelectorAll(
       '.selection-option',
     )
   }
@@ -95,6 +96,7 @@ class OptionsView extends View {
   addHandlerSelectTopic(handler) {
     this._parentElement.addEventListener('click', function (e) {
       const option = e.target.closest('.selection')
+      console.log('test')
       if (!option) return
       const topic = +option.querySelector('.selection-option').dataset
         .topic
