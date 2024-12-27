@@ -55,6 +55,7 @@ const controlValidateAnswer = function () {
   const answers = model.state.answers
   if (answers.answered) return
   if (!answers.selected[2]) {
+    console.log('calling render error')
     optionsView.renderError()
     return
   }
@@ -117,4 +118,4 @@ export const init = function () {
   resultsView.addHandlerPlayAgain(controlPlayAgain)
 }
 
-init()
+// init()

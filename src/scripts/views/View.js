@@ -11,12 +11,6 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup)
   }
 
-  update() {}
-
-  renderError() {
-    console.log('error')
-  }
-
   clear() {
     this._parentElement.innerHTML = ''
   }

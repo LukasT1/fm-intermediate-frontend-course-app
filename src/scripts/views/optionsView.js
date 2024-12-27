@@ -18,6 +18,12 @@ class OptionsView extends View {
     )
   }
 
+  renderError() {
+    this._parentElement
+      .querySelector('.error-msg')
+      .classList.toggle('selection-error--hidden')
+  }
+
   _generateMarkup() {
     return `
         ${this._data.currOptions
@@ -31,7 +37,11 @@ class OptionsView extends View {
       </button>`
           })
           .join()}
-       <button class="btn btn-submit type-heading-s">Submit answer</button>`
+       <button class="btn btn-submit type-heading-s">Submit answer</button>
+       <div class='selection-error error-msg selection-error--hidden'>
+  <img src='assets/images/icon-error.svg'>
+  <p class='type-medium'>Please select an answer</p>
+  </div>`
   }
 
   resetClasses() {
@@ -55,7 +65,10 @@ class OptionsView extends View {
         this._btnElement = e.target.closest('.selection')
         this._optionElement = e.target.querySelector('.selection-option')
 
-        if (!this._btnElement || !this._optionElement) return
+        if (!this._btnElement && !this._optionElement) return
+        this._parentElement
+          .querySelector('.error-msg')
+          .classList.add('selection-error--hidden')
         const option = this._btnElement.dataset.option
         const answer = this._btnElement.innerText.slice(2).trim()
 
@@ -96,7 +109,7 @@ class OptionsView extends View {
   addHandlerSelectTopic(handler) {
     this._parentElement.addEventListener('click', function (e) {
       const option = e.target.closest('.selection')
-      console.log('test')
+
       if (!option) return
       const topic = +option.querySelector('.selection-option').dataset
         .topic
@@ -106,6 +119,7 @@ class OptionsView extends View {
   }
 
   addHandlerRenderSubmitAnswer(handler) {
+    console.log('Adding submit answer handler') // Debugging log
     this._parentElement.addEventListener(
       'click',
       function (e) {
