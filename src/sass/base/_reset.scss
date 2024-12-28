@@ -1,3 +1,5 @@
+@use '../abstracts/mixins';
+
 *,
 *::before,
 *::after {
@@ -40,4 +42,16 @@ svg {
 
 html {
   font-size: 62.5%;
+}
+
+@include mixins.respond(large) {
+  html {
+    font-size: 57.5%;
+  }
+}
+
+@include mixins.respond(small) {
+  html {
+    font-size: 55%;
+  }
 }

@@ -65,10 +65,10 @@ class OptionsView extends View {
         this._btnElement = e.target.closest('.selection')
         this._optionElement = e.target.querySelector('.selection-option')
 
-        if (!this._btnElement && !this._optionElement) return
+        if (!this._btnElement || !this._optionElement) return
         this._parentElement
-          .querySelector('.error-msg')
-          .classList.add('selection-error--hidden')
+          ?.querySelector('.error-msg')
+          ?.classList.add('selection-error--hidden')
         const option = this._btnElement.dataset.option
         const answer = this._btnElement.innerText.slice(2).trim()
 

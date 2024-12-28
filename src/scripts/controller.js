@@ -8,6 +8,7 @@ import View from './views/View.js'
 import { loadLocalStorage } from './helper'
 import { clearLocalStorage } from './helper.js'
 import initialView from './views/initialView.js'
+import navView from './views/navView.js'
 
 const view = new View()
 
@@ -17,6 +18,7 @@ const controlSelectTopic = async function (topic) {
     await model.getQuizData(+topic)
     model.state.progress = 0
     controlQuiz(model.state.progress)
+    navView.render(model.state)
   } catch (error) {
     console.error(error)
   }
@@ -73,6 +75,7 @@ const controlValidateAnswer = function () {
 
 const controlSelectOption = function (answer, option) {
   if (model.state.progress === null || model.state.answers.answered) return
+
   model.state.answers.selected[2] = true
 
   optionsView.resetClasses()

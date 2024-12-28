@@ -1,8 +1,26 @@
+@use '../abstracts/mixins';
+
 .container {
   display: grid;
   place-content: center;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 10%;
+  row-gap: 5rem;
   height: 100vh;
   padding: 10rem;
+}
+
+@include mixins.respond(large) {
+  .container {
+    padding: 5rem;
+    place-content: start center;
+    grid-template-columns: 1fr;
+  }
+}
+
+@include mixins.respond(small) {
+  .container {
+    padding: 2.4rem;
+    padding-top: 1.6rem;
+    place-content: start center;
+  }
 }

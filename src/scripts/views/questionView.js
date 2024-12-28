@@ -12,7 +12,7 @@ class QuestionView extends View {
       <div class="main__question-sub-heading">
             <p class="type-body-s">Question ${this._data.progress + 1} of ${this._data.quiz.questions.length}</p>
           </div>    
-            <h2 class="type-heading-l">
+            <h2 class="type-heading-m">
               ${this._data.currQuestion}
             </h2>
           </div>

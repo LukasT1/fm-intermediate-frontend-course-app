@@ -1,3 +1,5 @@
+@use '../abstracts/mixins';
+
 .main {
   display: grid;
   grid-template-columns: subgrid;
@@ -5,7 +7,8 @@
   column-gap: 10vw;
 
   &__result {
-    width: 85%;
+    width: 100%;
+    max-width: 60rem;
     padding: 4.8rem;
     border-radius: 2.4rem;
     display: flex;
@@ -16,7 +19,8 @@
 
     &-btn-again {
       grid-column: 2/3;
-      width: 85%;
+      width: 100%;
+      max-width: 60rem;
       justify-content: center;
       margin-top: 2rem;
     }
@@ -39,9 +43,9 @@
     &-heading {
       order: 0;
     }
-    // &-sub-heading {
-    //   order: 1;
-    // }
+    &-sub-heading {
+      margin-bottom: 1.5rem;
+    }
 
     &-progress-bar {
       outline: solid 0.5rem var(--color-pure-white);
@@ -64,5 +68,16 @@
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 80rem;
+  }
+}
+
+@include mixins.respond(large) {
+  .main {
+    justify-items: center;
+    &__question {
+      margin-bottom: 6.4rem;
+    }
   }
 }

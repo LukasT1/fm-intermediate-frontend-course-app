@@ -1,0 +1,7 @@
+@use '../abstracts/variables';
+
+@mixin respond($breakpoint) {
+  @media (max-width: map-get(variables.$breakpoints, $breakpoint)) {
+    @content;
+  }
+}

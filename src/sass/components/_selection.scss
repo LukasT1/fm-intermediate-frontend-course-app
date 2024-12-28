@@ -12,7 +12,7 @@
   margin-bottom: 2rem;
 
   border: none;
-  min-width: 50rem;
+  // min-width: 50rem;
   transition: all 0.2s ease-in-out;
 
   &-error {
@@ -73,12 +73,13 @@
 
   &-tick {
     margin-left: auto;
+    min-width: 40px;
   }
 
   &-option {
     background-color: var(--color-light-grey);
-    width: 5.6rem;
-    height: 5.6rem;
+    min-width: 5.6rem;
+    min-height: 5.6rem;
     border-radius: 8px;
     display: grid;
     place-content: center;
