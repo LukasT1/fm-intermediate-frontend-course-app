@@ -74,14 +74,14 @@ html {
   font-style: normal;
   font-weight: 100 1000;
   font-stretch: 0% 200%;
-  src: url(/assets/fonts/Rubik-VariableFont_wght.ttf);
+  src: url(assets/fonts/Rubik-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "Rubik";
   font-style: italic;
   font-weight: 100 1000;
   font-stretch: 0% 200%;
-  src: url(/assets/fonts/Rubik-Italic-VariableFont_wght.ttf);
+  src: url(assets/fonts/Rubik-Italic-VariableFont_wght.ttf);
 }
 body {
   font-family: "Rubik";
@@ -136,7 +136,7 @@ p,
 }
 
 .light-mode {
-  background: var(--color-light-grey) url(../../assets/images/pattern-background-desktop-light.svg) no-repeat;
+  background: var(--color-light-grey) url(assets/images/pattern-background-desktop-light.svg) no-repeat;
   color: var(--color-dark-navy);
 }
 .light-mode .selection {
@@ -167,7 +167,7 @@ p,
 }
 
 .dark-mode {
-  background: var(--color-dark-navy) url(../../assets/images/pattern-background-desktop-dark.svg) no-repeat;
+  background: var(--color-dark-navy) url(assets/images/pattern-background-desktop-dark.svg) no-repeat;
 }
 .dark-mode .selection {
   background-color: var(--color-navy);

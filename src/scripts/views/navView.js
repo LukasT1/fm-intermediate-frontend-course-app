@@ -5,11 +5,11 @@ class NavView extends View {
   _data
 
   _generateMarkup() {
-    console.log(this._data)
+    console.log(this._data.quiz.icon)
     return `
       <div class="selection-option selection-option--${this._data.quiz.title.toLowerCase()}">
             <img
-              src=${this._data.quiz.icon}
+              src=${this._data.quiz.icon.slice(1)}
               class="nav__topic-icon"
               alt="${this._data.quiz.title} icon" />
           </div>

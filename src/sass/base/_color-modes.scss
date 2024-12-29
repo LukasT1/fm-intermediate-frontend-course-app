@@ -1,6 +1,6 @@
 .light-mode {
   background: var(--color-light-grey)
-    url(../../assets/images/pattern-background-desktop-light.svg) no-repeat;
+    url(assets/images/pattern-background-desktop-light.svg) no-repeat;
   color: var(--color-dark-navy);
 
   .selection {
@@ -42,7 +42,7 @@
 
 .dark-mode {
   background: var(--color-dark-navy)
-    url(../../assets/images/pattern-background-desktop-dark.svg) no-repeat;
+    url(assets/images/pattern-background-desktop-dark.svg) no-repeat;
   .selection {
     background-color: var(--color-navy);
     color: var(--color-pure-white);

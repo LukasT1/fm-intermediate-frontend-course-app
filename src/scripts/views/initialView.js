@@ -9,7 +9,7 @@ class InitalView extends View {
         <div class="nav__topic hidden">
           <div class="selection-option selection-option--accessibility">
             <img
-              src="assets/images/icon-accessibility.svg"
+              src="/assets/images/icon-accessibility.svg"
               class="nav__topic-icon"
               alt="" />
           </div>
@@ -60,7 +60,7 @@ class InitalView extends View {
             <div
               data-topic="0"
               class="selection-option selection-option--html type-heading-s">
-              <img src="assets/images/icon-html.svg" alt="" />
+              <img src="/assets/images/icon-html.svg" alt="" />
             </div>
             HTML
           </button>
@@ -68,7 +68,7 @@ class InitalView extends View {
             <div
               data-topic="1"
               class="selection-option selection-option--css type-heading-s">
-              <img src="assets/images/icon-css.svg" alt="" />
+              <img src="/assets/images/icon-css.svg" alt="" />
             </div>
             CSS
           </button>
@@ -76,7 +76,7 @@ class InitalView extends View {
             <div
               data-topic="2"
               class="selection-option selection-option--js type-heading-s">
-              <img src="assets/images/icon-js.svg" alt="" />
+              <img src="/assets/images/icon-js.svg" alt="" />
             </div>
             Javascript
           </button>
@@ -84,7 +84,7 @@ class InitalView extends View {
             <div
               data-topic="3"
               class="selection-option selection-option--accessibility type-heading-s">
-              <img src="assets/images/icon-accessibility.svg" alt="" />
+              <img src="/assets/images/icon-accessibility.svg" alt="" />
             </div>
             Accessibility
           </button>
