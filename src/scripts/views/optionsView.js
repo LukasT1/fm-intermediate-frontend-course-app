@@ -39,7 +39,7 @@ class OptionsView extends View {
           .join()}
        <button class="btn btn-submit type-heading-s">Submit answer</button>
        <div class='selection-error error-msg selection-error--hidden'>
-  <img src='/assets/images/icon-error.svg'>
+  <img src='./assets/images/icon-error.svg'>
   <p class='type-medium'>Please select an answer</p>
   </div>`
   }
