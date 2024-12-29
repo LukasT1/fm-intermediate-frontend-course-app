@@ -9,7 +9,7 @@ class NavView extends View {
     return `
       <div class="selection-option selection-option--${this._data.quiz.title.toLowerCase()}">
             <img
-              src=${this._data.quiz.icon.slice(1)}
+              src=${this._data.quiz.icon}
               class="nav__topic-icon"
               alt="${this._data.quiz.title} icon" />
           </div>

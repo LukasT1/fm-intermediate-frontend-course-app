@@ -138,7 +138,7 @@ var y=Object.defineProperty;var b=(e,t,s)=>t in e?y(e,t,{enumerable:!0,configura
      `}}const H=new $;class k extends d{constructor(){super(...arguments);r(this,"_parentElement",document.querySelector(".nav__topic"));r(this,"_data")}_generateMarkup(){return console.log(this._data.quiz.icon),`
       <div class="selection-option selection-option--${this._data.quiz.title.toLowerCase()}">
             <img
-              src=${this._data.quiz.icon.slice(1)}
+              src=${this._data.quiz.icon}
               class="nav__topic-icon"
               alt="${this._data.quiz.title} icon" />
           </div>
